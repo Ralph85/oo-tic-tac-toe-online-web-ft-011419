@@ -103,5 +103,3 @@ WIN_COMBINATIONS = [
       end
     end
   end
-
-    
