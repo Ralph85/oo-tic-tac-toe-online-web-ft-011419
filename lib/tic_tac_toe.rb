@@ -22,3 +22,28 @@ WIN_COMBINATIONS = [
     puts "_ _ _ _ _ _ _ _ _"
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
+
+  def input_to_index(user_input)
+    user_input.to_i - 1
+  end
+
+  def move(position, char)
+    @board[position] = char
+  end
+
+  def position_taken?(index_i)
+    ((@board[index_i] == "X") || (@board[index_i] == "O"))
+  end
+
+  def valid_move?(index)
+    index.between?(0, 8) && !position_taken?(inddex)
+  end
+
+  def turn_count
+    number_of_turns = 0
+    @board.each do |space|
+    if space == "X" || space == "O"
+        number_of_turns += 1
+      end
+    end
+    return number_of_turns
