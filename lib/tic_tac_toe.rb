@@ -54,5 +54,3 @@ WIN_COMBINATIONS = [
       else
         "O"
       end
-
-      
